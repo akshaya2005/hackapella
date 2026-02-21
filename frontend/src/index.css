@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: 240 6% 7%;
+    --foreground: 40 20% 92%;
+
+    --card: 240 5% 11%;
+    --card-foreground: 40 20% 92%;
+
+    --popover: 240 5% 11%;
+    --popover-foreground: 40 20% 92%;
+
+    --primary: 38 92% 55%;
+    --primary-foreground: 240 6% 7%;
+
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 40 15% 80%;
+
+    --muted: 240 4% 14%;
+    --muted-foreground: 240 5% 50%;
+
+    --accent: 38 92% 55%;
+    --accent-foreground: 240 6% 7%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 4% 18%;
+    --input: 240 4% 18%;
+    --ring: 38 92% 55%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 240 5% 9%;
+    --sidebar-foreground: 40 20% 92%;
+    --sidebar-primary: 38 92% 55%;
+    --sidebar-primary-foreground: 240 6% 7%;
+    --sidebar-accent: 240 4% 14%;
+    --sidebar-accent-foreground: 40 20% 92%;
+    --sidebar-border: 240 4% 18%;
+    --sidebar-ring: 38 92% 55%;
+
+    --score-bar: 240 4% 20%;
+    --score-bar-active: 38 80% 50%;
+    --score-bar-selected: 200 80% 55%;
+    --score-line: 240 4% 25%;
+    --score-note: 40 20% 85%;
+    --song-a: 38 92% 55%;
+    --song-b: 200 80% 55%;
+    --glow-primary: 0 0% 0% / 0;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Outfit', sans-serif;
+  }
+  code, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .glow-amber {
+    box-shadow: 0 0 20px hsl(38 92% 55% / 0.15), 0 0 60px hsl(38 92% 55% / 0.05);
+  }
+  .glow-blue {
+    box-shadow: 0 0 20px hsl(200 80% 55% / 0.15), 0 0 60px hsl(200 80% 55% / 0.05);
+  }
+}
